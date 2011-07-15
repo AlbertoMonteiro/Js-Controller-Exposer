@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>@ViewBag.Message</h2>
+<p>
+    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+</p>
+<input id="getControllers" type="button" name="getControllers" value="Get Controllers" />
+
+<script type="text/javascript">
+    $(function () {
+        $("#getControllers").click(function () {
+            $.getJSON("/JavascriptExposer/Index", function (json) {
+                $.each(json, function(index, item) {
+                    alert(item.Name);
+                });
+            });
+        });
+    });
+</script>
