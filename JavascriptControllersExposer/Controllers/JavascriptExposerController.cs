@@ -1,4 +1,4 @@
 ﻿namespace JsControllerExpose.Example.Controllers {
-    public class JavascriptExposerController : JsControllerExposer.JsControllerExposer {
+    public class JavascriptExposer2Controller : JsControllerExposer.JsControllerExposer {
     }
 }

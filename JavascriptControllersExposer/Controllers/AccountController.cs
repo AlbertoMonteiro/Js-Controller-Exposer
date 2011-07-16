@@ -4,7 +4,7 @@ using System.Web.Security;
 using JsControllerExpose.Example.Models;
 
 namespace JsControllerExpose.Example.Controllers {
-    public class AccountController : System.Web.Mvc.Controller {
+    public class Account2Controller : System.Web.Mvc.Controller {
 
         //
         // GET: /Account/LogOn

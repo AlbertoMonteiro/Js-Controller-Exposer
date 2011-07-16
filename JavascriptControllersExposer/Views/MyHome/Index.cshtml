@@ -10,9 +10,9 @@
 <script type="text/javascript">
     $(function () {
         $("#getControllers").click(function () {
-            $.getScript("/JavascriptExposer/Index", function (data) {
+            $.getScript("/JavascriptExposer2/Index", function (data) {
                 $("#myScript").html(data);
-                var home = new HomeController();
+                var home = new MyHomeController();
                 home.About({}, function (json) {
                     alert(json.name);
                 });
