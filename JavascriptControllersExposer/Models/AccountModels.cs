@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Web.Mvc;
 using System.Web.Security;
 
-namespace JavascriptControllersExposer.Models {
+namespace JsControllerExpose.Example.Models {
 
     public class ChangePasswordModel {
         [Required]

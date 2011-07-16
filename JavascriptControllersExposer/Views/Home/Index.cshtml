@@ -1,19 +1,20 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
 <h2>@ViewBag.Message</h2>
 <p>
     To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
 </p>
 <input id="getControllers" type="button" name="getControllers" value="Get Controllers" />
-
+<script id="myScript" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
         $("#getControllers").click(function () {
-            $.getJSON("/JavascriptExposer/Index", function (json) {
-                $.each(json, function(index, item) {
-                    alert(item.Name);
+            $.getScript("/JavascriptExposer/Index", function (data) {
+                $("#myScript").html(data);
+                var home = new HomeController();
+                home.About({}, function (json) {
+                    alert(json.name);
                 });
             });
         });

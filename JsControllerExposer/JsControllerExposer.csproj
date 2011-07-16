@@ -43,11 +43,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helper\AspNetMvcUrlGenerator.cs" />
+    <Compile Include="Helper\HttpVerb.cs" />
     <Compile Include="JsControllerExposer.cs" />
     <Compile Include="Model\Controller.cs" />
     <Compile Include="Model\ControllerAction.cs" />
     <Compile Include="Model\Parametro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="defaultjs.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CreateController.txt" />
+    <EmbeddedResource Include="CreateControllerActionFunction.txt" />
+    <EmbeddedResource Include="CreateRoutes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

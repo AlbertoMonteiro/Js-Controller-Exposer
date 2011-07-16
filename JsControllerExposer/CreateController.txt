@@ -1,0 +1,4 @@
+﻿function {0}() @
+    UseDJR.call(this);
+#;
+{0}.prototype.routes = @#;

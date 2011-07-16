@@ -1,0 +1,8 @@
+﻿{0}.prototype.{1} = function (object, callback, error) @
+    if (typeof object === "function") @
+        callback = object;
+        error = callback;
+    #
+    this.ajax(object, this.routes.{1}.method, this.routes.{1}.url, callback, error);
+    return this;
+#;

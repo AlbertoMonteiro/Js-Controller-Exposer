@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavascriptControllersExposer", "JavascriptControllersExposer\JavascriptControllersExposer.csproj", "{23BC1813-2B3D-4728-9EF4-30AA33FD3F26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsControllerExpose.Example", "JavascriptControllersExposer\JsControllerExpose.Example.csproj", "{23BC1813-2B3D-4728-9EF4-30AA33FD3F26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsControllerExposer", "JsControllerExposer\JsControllerExposer.csproj", "{84A5B687-979B-4EE9-94FF-703E4BAAF0C9}"
 EndProject

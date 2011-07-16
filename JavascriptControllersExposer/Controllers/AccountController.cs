@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Web.Mvc;
 using System.Web.Security;
-using JavascriptControllersExposer.Models;
+using JsControllerExpose.Example.Models;
 
-namespace JavascriptControllersExposer.Controllers {
+namespace JsControllerExpose.Example.Controllers {
     public class AccountController : System.Web.Mvc.Controller {
 
         //

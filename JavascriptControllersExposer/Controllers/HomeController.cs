@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace JavascriptControllersExposer.Controllers {
+namespace JsControllerExpose.Example.Controllers {
     public class HomeController : Controller {
         
         public ActionResult Index() {
@@ -9,8 +9,8 @@ namespace JavascriptControllersExposer.Controllers {
         }
         
         [HttpGet]
-        public ActionResult About(int id, string nome) {
-            return View();
+        public ActionResult About() {
+            return Json(new { name = "Alberto"}, JsonRequestBehavior.AllowGet);
         }
 
         [HttpDelete]

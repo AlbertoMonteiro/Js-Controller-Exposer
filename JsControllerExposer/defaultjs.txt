@@ -1,0 +1,53 @@
+﻿Array.prototype.add = function (el) {
+    this[this.length] = el;
+    return this;
+};
+
+function toMap(object) {
+    var arr = [];
+    for (var item in object) arr[arr.length] = { key: item, value: object[item] };
+    return arr;
+};
+
+var DJR = function () {
+    this.data = "";
+    this.error = {};
+    this.format = ".json";
+    this.constructor = function () {
+        return this.constructor.name;
+    };
+
+    this.formatURL = function (url, params) {
+        toMap(params).forEach(function (param) {
+            url = url.replace((new RegExp(param.key)).source, param.value);
+        });
+        return url;
+    };
+    this.ajax = function (object, method, url, callback, error) {
+        var params = [];
+        params["\(.:format\)"] = this.format;
+        toMap(object).forEach(function (param) { params[":" + param.key] = param.value; });
+        $.ajax({
+            data: JSON.stringify(object),
+            dataType: 'json',
+            error: error,
+            contentType: "application/json",
+            headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            success: callback,
+            type: method,
+            url: this.formatURL(url, params)
+        });
+    };
+    this.callbackDefault = function (data) {
+        this.data = data;
+    };
+    this.errorDefault = function (error) {
+        this.error = error;
+    };
+
+};
+var UseDJR = function () {
+    this.useDJR = DJR;
+    this.useDJR();
+    delete this.useDJR;
+};

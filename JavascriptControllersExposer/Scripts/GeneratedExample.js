@@ -46,31 +46,38 @@ var DJR = function () {
     };
 
 };
+
 var UseDJR = function () {
     this.useDJR = DJR;
     this.useDJR();
     delete this.useDJR;
 };
+
 function BalanceteController() {
     UseDJR.call(this);
 };
 BalanceteController.prototype.routes = {};
+
 function ContasController() {
     UseDJR.call(this);
 };
 ContasController.prototype.routes = {};
+
 function EmpresasController() {
     UseDJR.call(this);
 };
 EmpresasController.prototype.routes = {};
+
 function HomeController() {
     UseDJR.call(this);
 };
 HomeController.prototype.routes = {};
+
 function LancamentosController() {
     UseDJR.call(this);
 };
 LancamentosController.prototype.routes = {};
+
 function RazaoController() {
     UseDJR.call(this);
 };
